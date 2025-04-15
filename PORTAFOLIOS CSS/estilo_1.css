@@ -1,0 +1,94 @@
+
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e1b1b1;
+    color: #333;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .registro-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+  }
+  
+  .registro-panel {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .registro-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .registro-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .registro-header h1 {
+    font-size: 24px;
+    color: #444;
+  }
+  
+  .form-registro {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-registro label {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  .form-registro input,
+  .form-registro select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-registro input:focus,
+  .form-registro select:focus {
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(136, 136, 136, 0.3);
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #333;
+    transform: scale(1.03);
+  }
+  
+  button[type="submit"]:active {
+    transform: scale(0.97);
+    background-color: #111;
+  }
+  

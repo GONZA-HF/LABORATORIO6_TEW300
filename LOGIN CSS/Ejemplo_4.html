@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login 4</title>
+  <link rel="stylesheet" href="estilo_4.css">
+</head>
+<body>
+  <main class="wrapper">
+    <section class="login-panel">
+      <header class="panel-header">
+        <img src="informatica.jpg"  width="100" alt="Avatar" class="avatar">
+        <h1>Panel de Acceso</h1>
+      </header>
+      <form class="form-login">
+        <label for="rol">Rol:</label>
+        <select id="rol">
+          <option value="admin">COORDINADOR</option>
+          <option value="editor">DOCENTE</option>
+          <option value="lector">ESTUDIANTE</option>
+        </select>
+
+        <label for="user">Usuario</label>
+        <input type="text" id="user">
+
+        <label for="pass">Contraseña</label>
+        <input type="password" id="pass">
+
+        <button type="submit" class="neon">Acceder</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

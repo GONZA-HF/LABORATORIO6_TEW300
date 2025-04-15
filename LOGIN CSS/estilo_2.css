@@ -1,0 +1,110 @@
+/* estilo2.css - Estilo intermedio para Login 2 */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-header {
+    width: 100%;
+    background-color: #4A90E2;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-header h2 {
+    color: rgb(255, 250, 250);
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .login-box {
+    background-color: #1c619962;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.995);
+    width: 320px;
+    animation: fadeIn 1s ease;
+  }
+  
+  .form-wrapper form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    color: #231c1c;
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 0.6rem;
+    border: 1px solid #328aa3a0;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #4A90E2;
+    outline: none;
+    box-shadow: 0 0 4px #4A90E2;
+  }
+  
+  .extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .extras a {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .extras a:hover {
+    color: #2c6ebd;
+    text-decoration: underline;
+  }
+  
+  button[type="submit"] {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #032754;
+    transform: translateY(-2px);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

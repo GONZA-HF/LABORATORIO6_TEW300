@@ -1,0 +1,104 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    align-items: normal;
+    justify-content:center;
+  }
+  
+  /* Wrapper principal */
+  .registro-wrapper {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Panel del formulario */
+  .registro-panel {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,255,255,0.2);
+  }
+  
+  /* Header */
+  .registro-header h1 {
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  }
+  
+  /* Formulario */
+  .form-registro {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-registro label {
+    color: #e0f7fa;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-registro input,
+  .form-registro select {
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #140e0e;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #00ffff50;
+  }
+  
+  /* Efecto de foco y hover */
+  .form-registro input:focus,
+  .form-registro select:focus,
+  .form-registro input:hover,
+  .form-registro select:hover {
+    transform: scale(1.03);
+    border-color: #00ff99;
+    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  }
+  
+  /* Botón enviar */
+  .form-registro button {
+    background-color: transparent;
+    color: #00ffff;
+    padding: 12px;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ffff;
+    box-shadow: 0 0 8px #00ffff80;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover botón */
+  .form-registro button:hover {
+    background-color: #00ffff;
+    color: #0f2027;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    transform: scale(1.05);
+  }
+  
+  /* Efecto clic botón */
+  .form-registro button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99 inset;
+  }
+  

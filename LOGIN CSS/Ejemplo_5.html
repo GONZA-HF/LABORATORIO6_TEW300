@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Interactivo</title>
+  <link rel="stylesheet" href="estilo_5.css">
+  <style>
+    /* Estilos básicos temporales para probar */
+    .form-group { margin: 1rem 0; }
+    .rol-form { display: none; }
+  </style>
+</head>
+<body>
+  <main class="login-wrapper">
+    <section class="login-panel">
+      <header class="login-header">
+        <h1>Ingreso al Sistema</h1>
+      </header>
+
+      <form id="formLogin" class="form-login">
+        <div class="form-group">
+          <label for="rol">¿QUIEN DESEA INGRESAR?:</label>
+          <select id="rol" name="rol">
+            <option value="">-- Selecciona --</option>
+            <option value="coordinador">Coordinador</option>
+            <option value="docente">Docente</option>
+            <option value="estudiante">Estudiante</option>
+          </select>
+        </div>
+
+        <!-- Sección Coordinador -->
+        <div class="rol-form" id="form-coordinador">
+          <div class="form-group">
+            <label for="coord-user">Usuario</label>
+            <input type="text" id="coord-user" name="coord-user">
+          </div>
+          <div class="form-group">
+            <label for="coord-pass">Contraseña</label>
+            <input type="password" id="coord-pass" name="coord-pass">
+          </div>
+          <div class="form-group">
+            <label for="coord-clave">Clave de Autenticación</label>
+            <input type="text" id="coord-clave" name="coord-clave">
+          </div>
+          <div class="form-group">
+            <label for="coord-region">Codigo Secreto</label>
+            <input type="text" id="coord-region" name="coord-region">
+          </div>
+        </div>
+
+        <!-- Sección Docente -->
+        <div class="rol-form" id="form-docente">
+          <div class="form-group">
+            <label for="doc-user">Usuario</label>
+            <input type="text" id="doc-user" name="doc-user">
+          </div>
+          <div class="form-group">
+            <label for="doc-pass">Contraseña</label>
+            <input type="password" id="doc-pass" name="doc-pass">
+          </div>
+          <div class="form-group">
+            <label for="doc-materia">Materia Asignada</label>
+            <input type="text" id="doc-materia" name="doc-materia">
+          </div>
+        </div>
+
+        <!-- Sección Estudiante -->
+        <div class="rol-form" id="form-estudiante">
+          <div class="form-group">
+            <label for="estu-user">Nombre/Estudiante</label>
+            <input type="text" id="estu-user" name="estu-user">
+          </div>
+          <div class="form-group">
+            <label for="Matricula">Matricula</label>
+            <input type="text" id="Matricula" name="Matricula">
+          </div>
+          <div class="form-group">
+            <label for="estu-pass">Contraseña</label>
+            <input type="password" id="estu-pass" name="estu-pass">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Ingresar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // Mostrar/Ocultar formularios según el rol
+    const selectRol = document.getElementById('rol');
+    const formCoordinador = document.getElementById('form-coordinador');
+    const formDocente = document.getElementById('form-docente');
+    const formEstudiante = document.getElementById('form-estudiante');
+
+    selectRol.addEventListener('change', () => {
+      const rol = selectRol.value;
+
+      formCoordinador.style.display = 'none';
+      formDocente.style.display = 'none';
+      formEstudiante.style.display = 'none';
+
+      if (rol === 'coordinador') {
+        formCoordinador.style.display = 'block';
+      } else if (rol === 'docente') {
+        formDocente.style.display = 'block';
+      } else if (rol === 'estudiante') {
+        formEstudiante.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

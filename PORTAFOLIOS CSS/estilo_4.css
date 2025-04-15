@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #0a0f1a;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    height: 100vh;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .registro-wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    animation: slideIn 1.2s ease-out;
+  }
+  
+  .registro-panel {
+    background-color: #14213d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(20, 33, 61, 0.6);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .registro-panel:hover {
+    transform: translateY(-5px);
+  }
+  
+  .registro-header {
+    background-color: #1d3557;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .registro-header h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.6rem;
+  }
+  
+  .form-registro label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #a8dadc;
+  }
+  
+  .form-registro input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1e293b;
+    color: #e0e0e0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .form-registro input:focus,
+  .form-registro input:hover {
+    box-shadow: 0 0 8px #0ff, 0 0 15px #00f2ff;
+    transform: scale(1.03);
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 2px solid #00f2ff;
+    color: #00f2ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  button[type="submit"]::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    width: 150%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.4), transparent 60%);
+    transform: rotate(45deg);
+    transition: opacity 0.4s;
+    opacity: 0;
+  }
+  
+  button[type="submit"]:hover::before {
+    opacity: 1;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #00f2ff10;
+    box-shadow: 0 0 12px #00f2ff, 0 0 25px #00f2ff;
+    color: #ffffff;
+  }
+  
+  button[type="submit"]:active {
+    transform: scale(0.97);
+    background-color: #008db3;
+    color: #ffffff;
+    box-shadow: 0 0 15px #007c99 inset;
+  }
+  
+  /* Animaciones */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

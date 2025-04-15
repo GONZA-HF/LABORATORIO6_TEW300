@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Básico</title>
+  <link rel="stylesheet" href="estilo_1.css">
+</head>
+<body>
+  <main class="registro-wrapper">
+    <section class="registro-panel">
+      <header class="registro-header">
+        <h1>Formulario de Registro</h1>
+      </header>
+
+      <form class="form-registro">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+
+        <label for="usuario">Nombre de usuario:</label>
+        <input type="text" id="usuario" name="usuario">
+
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="clave">
+
+        <label for="confirmar">Confirmar contraseña:</label>
+        <input type="password" id="confirmar" name="confirmar">
+
+        <label for="cargo">Cargo en la empresa:</label>
+        <select id="cargo" name="cargo">
+          <option value="">Seleccione un cargo</option>
+          <option value="gerente">Gerente</option>
+          <option value="analista">Analista</option>
+          <option value="desarrollador">Desarrollador</option>
+          <option value="soporte">Soporte Técnico</option>
+          <option value="administrativo">Administrativo</option>
+        </select>
+
+        <button type="submit">Enviar Registro</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  .registro-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Panel del formulario */
+  .registro-panel {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Encabezado del formulario */
+  .registro-header h1 {
+    background-color: #004aad;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    border-radius: 8px;
+  }
+  
+  /* Estilos generales del formulario */
+  .form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-registro label {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  
+  .form-registro input {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Sombra animada en los inputs */
+  .form-registro input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 74, 173, 0.6);
+    border-color: #004aad;
+  }
+  
+  /* Botón de enviar */
+  .form-registro button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    background-color: #0080ff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  /* Hover del botón */
+  .form-registro button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Click del botón */
+  .form-registro button:active {
+    background-color: #004494;
+    transform: scale(0.97);
+  }
+  
