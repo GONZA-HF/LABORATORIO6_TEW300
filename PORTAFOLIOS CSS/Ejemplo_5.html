@@ -53,8 +53,7 @@
           <label>Especialidad:</label>
           <select name="carrera">
             <option value="informatica">Informática Industrial</option>
-            <option value="mecanica">Mecánica</option>
-            <option value="automotriz">Automotriz</option>
+            <option value="mecanica">Mecánica Automotriz</option>
           </select>
 
           <label>Docente encargado:</label>
@@ -69,29 +68,49 @@
     </div>
   </div>
 
-  <script>
+  <script> 
     const botones = document.querySelectorAll(".btn-formulario");
     const iframes = document.querySelectorAll(".contenedor-formularios iframe");
     const formulario5 = document.getElementById("formulario5-container");
-
+  
     botones.forEach((btn, index) => {
       btn.addEventListener("click", () => {
         // Ocultar todos los formularios
-        iframes.forEach(f => f.style.display = "none");
+        iframes.forEach(f => {
+          f.style.display = "none";
+          f.style.height = "0px"; // Reiniciar altura para prevenir scroll
+        });
         formulario5.style.display = "none";
-
+  
         // Mostrar el formulario correspondiente
         if (index < 4) {
-          document.getElementById(`formulario${index + 1}`).style.display = "block";
+          const formulario = document.getElementById(`formulario${index + 1}`);
+          formulario.style.display = "block";
+  
+          // Esperar a que el contenido cargue y luego ajustar altura
+          formulario.onload = function () {
+            const contenido = formulario.contentWindow.document.body;
+            formulario.style.height = contenido.scrollHeight + "px";
+            formulario.style.width = "100%"; // o un ancho dinámico si prefieres
+          };
+  
+          // Si ya está cargado (por navegación previa), forzar el ajuste ahora
+          if (formulario.contentWindow.document.readyState === "complete") {
+            const contenido = formulario.contentWindow.document.body;
+            formulario.style.height = contenido.scrollHeight + "px";
+            formulario.style.width = "100%";
+          }
+  
         } else {
           formulario5.style.display = "block";
         }
-
+  
         // Cambiar estilos de botones
         botones.forEach(b => b.classList.remove("activo"));
         btn.classList.add("activo");
       });
     });
   </script>
+  
 </body>
 </html>

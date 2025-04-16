@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Alejandro Martínez</title>
+  <link rel="stylesheet" href="estilo_3.css">
+</head>
+<body>
+  <main class="portafolio">
+    <header class="encabezado">
+      <section class="presentacion">
+        <h1>Portafolio de Alejandro Martínez</h1>
+        <h2>Ingeniero en Sistemas</h2>
+        <p><strong>Especialista en desarrollo de software, arquitectura de sistemas y soluciones tecnológicas escalables. Más de 15 años transformando ideas en productos digitales de alto impacto.</strong></p>
+      </section>
+      <div class="borde-horizontal"></div> 
+    </header>
+
+    <section class="contenido">
+      <section class="datos-personales tarjeta">
+        <img src="foto.svg" alt="Foto de Alejandro Martínez" class="foto-perfil">
+        <div class="datos-superiores">
+          <h3>Alejandro Martínez</h3>
+          <p>Ingeniero en Sistemas</p>
+          <p>Ciudad: Santa Cruz, Bolivia</p>
+        </div>
+        <div class="linea-divisoria"></div> 
+        <div class="redes-sociales">
+          <p><a href="#"><img src="gmail.png" alt="Gmail" class="icono redes"> alejandromartinez.dev@gmail.com</a></p>
+          <p><a href="#"><img src="whatsapplogo.webp" alt="WhatsApp" class="icono redes"> +591 71234567</a></p>
+          <p><a href="#"><img src="telegram.png" alt="Telegram" class="icono redes"> /alejandromartinez</a></p>
+          <p><a href="#"><img src="R.png" alt="GitHub" class="icono redes"> /amartinez-dev</a></p>
+        </div>    
+        <div class="linea-divisoria"></div>
+        <div class="descripcion">
+          <p>Ingeniero apasionado por el desarrollo tecnológico. He liderado equipos en grandes empresas de tecnología, desarrollado plataformas robustas, e impulsado soluciones de IA y Big Data. Con fuerte enfoque en la calidad del código y experiencia del usuario.</p>
+        </div>
+      </section>
+
+      <section class="informacion-profesional">
+        <article class="experiencia tarjeta colapsable">
+          <h4>Experiencia</h4>
+          <ul>
+            <li><strong>CTO - NexTech Solutions</strong> - Dirección tecnológica y liderazgo de equipos. (2020 - presente)</li>
+            <li><strong>Senior Software Engineer - GlobalSoft</strong> - Arquitectura de microservicios y DevOps. (2016 - 2020)</li>
+            <li><strong>Desarrollador Full Stack - WebImpact</strong> - Desarrollo frontend y backend. (2012 - 2016)</li>
+            <li><strong>Consultor Freelance</strong> - Automatización de procesos para empresas medianas. (2009 - 2012)</li>
+          </ul>
+        </article>
+
+        <article class="proyectos tarjeta colapsable">
+          <h4>Proyectos Realizados</h4>
+          <ul>
+            <li>Desarrollo de plataforma de e-learning con IA adaptativa</li>
+            <li>App de logística para transportes interdepartamentales</li>
+            <li>Portal web de servicios municipales para Santa Cruz</li>
+            <li>Sistema ERP personalizado para empresa minera</li>
+            <li>App de control domótico con React Native y Firebase</li>
+          </ul>
+        </article>
+
+        <article class="servicios tarjeta colapsable">
+          <h4>Servicios</h4>
+          <ul>
+            <li>Desarrollo de sistemas a medida</li>
+            <li>Automatización de procesos empresariales</li>
+            <li>Consultoría en arquitectura de software</li>
+            <li>Desarrollo web y móvil</li>
+            <li>Capacitación en tecnologías emergentes</li>
+          </ul>
+        </article>
+
+        <article class="galeria tarjeta colapsable">
+          <h4>Galería de Trabajos</h4>
+          <div class="galeria-imagenes">
+            <img src="proyecto1.jpg" alt="Plataforma educativa">
+            <img src="proyecto2.jpg" alt="App logística">
+            <img src="proyecto3.jpg" alt="Web municipal">
+            <img src="proyecto4.jpg" alt="ERP">
+            <img src="proyecto5.jpg" alt="App domótica">
+          </div>
+        </article>
+
+        <article class="curriculum tarjeta colapsable expandida">
+          <h4>Currículum Vitae</h4>
+          <p>Descargue mi currículum actualizado con toda la información profesional y académica.</p>
+          <a href="curriculum.pdf" class="btn-cv" download>Descargar CV</a>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tarjetas = document.querySelectorAll('.tarjeta');
+  
+      tarjetas.forEach(tarjeta => {
+        tarjeta.addEventListener('click', () => {
+          const yaExpandida = tarjeta.classList.contains('expandida');
+  
+          // Contraer todas
+          tarjetas.forEach(t => {
+            t.classList.remove('expandida');
+            const colapsable = t.querySelector('.colapsable');
+            if (colapsable) colapsable.classList.remove('expandida');
+          });
+  
+          // Si no estaba expandida, expandir esta
+          if (!yaExpandida) {
+            tarjeta.classList.add('expandida');
+            const colapsable = tarjeta.querySelector('.colapsable');
+            if (colapsable) colapsable.classList.add('expandida');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

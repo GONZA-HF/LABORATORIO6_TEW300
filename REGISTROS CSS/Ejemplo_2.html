@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Leonardo Rivas</title>
+  <link rel="stylesheet" href="estilo_2.css">
+</head>
+<body>
+  <main class="portafolio">
+    <header class="encabezado">
+      <section class="presentacion">
+        <h1>Portafolio de Leonardo Rivas</h1>
+        <h2>Administrador de Empresas</h2>
+        <p><strong>Con una amplia trayectoria en gestión estratégica, optimización de recursos y liderazgo de equipos multidisciplinarios. Apasionado por la eficiencia organizacional, el desarrollo humano y el crecimiento sostenible de las empresas.</strong></p>
+      </section>
+      
+    </header>
+
+    <section class="contenido">
+      <section class="datos-personales_tarjeta">
+        <img src="foto.svg" alt="Foto de Leonardo Rivas" class="foto-perfil">
+        <h3>Leonardo Rivas</h3>
+        <p> <strong>Administrador de Empresas</strong></p>
+        <p>Ciudad: La Paz, Bolivia</p>
+        <p><a href="#"><img src="gmail.png" alt="Gmail" class="icono redes"> leonardo.rivas@gmail.com</a></p>
+        <p><a href="#"><img src="whatsapplogo.webp" alt="WhatsApp" class="icono redes"> +591 76543210</a></p>
+        <p><a href="#"><img src="facebook.png" alt="Facebook" class="icono redes"> /leonardorivas</a></p>
+        <p><a href="#"><img src="tiktok.png" alt="TikTok" class="icono redes"> @leo_empresarial</a></p>
+        <p><a href="#"><img src="telegram.png" alt="Telegram" class="icono redes"> @rivas_adm</a></p>
+        <div class="descripcion">
+          <p>Profesional con más de 12 años liderando proyectos de transformación empresarial, mejorando procesos internos y elevando el rendimiento financiero de diversas compañías en Bolivia y Latinoamérica. Enfocado en la innovación estratégica y la implementación de sistemas de calidad ISO.</p>
+        </div>
+      </section>
+
+      <section class="informacion-profesional">
+        <article class="experiencia tarjeta colapsable">
+          <h4 onclick="this.parentElement.classList.toggle('expandida')">Experiencia</h4>
+          <ul>
+            <li><strong>Gerente General</strong> - Coordinación de operaciones y estrategia empresarial. (2019 - presente)</li>
+            <li><strong>Jefe de Finanzas</strong> - Supervisión de presupuestos y planificación fiscal. (2016 - 2019)</li>
+            <li><strong>Analista de Proyectos</strong> - Evaluación de rentabilidad en proyectos de expansión. (2014 - 2016)</li>
+            <li><strong>Consultor de Negocios</strong> - Asesoría a startups y PYMES. (2013 - 2014)</li>
+            <li><strong>Coordinador Administrativo</strong> - Gestión de recursos humanos y procesos internos. (2011 - 2013)</li>
+            <li><strong>Asistente de Gerencia</strong> - Apoyo en operaciones administrativas. (2010 - 2011)</li>
+            <li><strong>Interno de Planificación</strong> - Desarrollo de reportes y análisis. (2009 - 2010)</li>
+            <li><strong>Responsable de Calidad</strong> - Implementación de ISO 9001. (2007 - 2009)</li>
+            <li><strong>Capacitador Empresarial</strong> - Talleres de liderazgo y gestión. (2006 - 2007)</li>
+            <li><strong>Asistente Contable</strong> - Registro y control financiero. (2005 - 2006)</li>
+          </ul>
+        </article>
+
+        <article class="empresas tarjeta colapsable">
+          <h4 onclick="this.parentElement.classList.toggle('expandida')">Empresas</h4>
+          <ul>
+            <li>Banco Andino</li>
+            <li>LogiCorp Bolivia</li>
+            <li>Grupo Empresarial APU</li>
+            <li>Minerva Group</li>
+            <li>Soluciones Integrales LP</li>
+            <li>Alianza Comercial Túpac</li>
+            <li>Globex Ltda.</li>
+            <li>NovaBusiness SRL</li>
+            <li>TransData Group</li>
+            <li>Innova Consultores</li>
+            <li>UrbanMarket Bolivia</li>
+          </ul>
+        </article>
+
+        <article class="educacion tarjeta colapsable">
+          <h4 onclick="this.parentElement.classList.toggle('expandida')">Educación</h4>
+          <ul>
+            <li>Licenciatura en Administración de Empresas - UMSA (2000 - 2005)</li>
+            <li>Diplomado en Finanzas Corporativas - UPB (2007 - 2008)</li>
+            <li>Diplomado en Gestión de Proyectos - UCB (2009 - 2010)</li>
+            <li>Maestría en Dirección Estratégica - UNIR (2012 - 2014)</li>
+            <li>Curso de Innovación Empresarial - EdX Harvard (2015)</li>
+            <li>Certificación PMP - PMI Bolivia (2016)</li>
+            <li>Seminario de Gestión del Cambio - CEI (2017)</li>
+            <li>Curso de Liderazgo Ejecutivo - Coursera (2020)</li>
+          </ul>
+        </article>
+
+        <article class="cv tarjeta">
+          <h4>Currículum Vitae</h4>
+          <p>Descarga el documento PDF para más información:</p>
+          <a href="LeonardoRivas_CV.pdf" download class="boton-descarga">Descargar CV</a>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('click', function(e) {
+      const tarjetas = document.querySelectorAll('.colapsable');
+      tarjetas.forEach(tarjeta => {
+        if (!tarjeta.contains(e.target)) {
+          tarjeta.classList.remove('expandida');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

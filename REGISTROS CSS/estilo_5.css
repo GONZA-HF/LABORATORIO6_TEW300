@@ -1,0 +1,159 @@
+/* === ESTILO GENERAL === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* === HEADER === */
+  header.encabezado {
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    color: #caff9a;
+    text-shadow: 0 0 10px #5eff00;
+    animation: expandText 1s ease-in-out forwards;
+  }
+  
+  header.encabezado:hover {
+    text-shadow: 0 0 15px #5eff00, 0 0 30px #5eff00;
+  }
+  
+  @keyframes expandText {
+    0% {
+      letter-spacing: 0;
+    }
+    100% {
+      letter-spacing: 3px;
+    }
+  }
+  
+  
+  /* === TARJETA DE DATOS === */
+  .datos {
+    background-color: #111;
+    border: 2px solid #5eff00;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #5eff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .datos img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .neon-divider {
+    height: 2px;
+    background: #5eff00;
+    margin: 10px 0;
+    box-shadow: 0 0 10px #5eff00;
+    animation: glowDivider 2s infinite alternate;
+  }
+  
+  @keyframes glowDivider {
+    from {
+      box-shadow: 0 0 5px #5eff00;
+    }
+    to {
+      box-shadow: 0 0 20px #5eff00;
+    }
+  }
+  
+  .contacto, .sobre {
+    width: 100%;
+    padding: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .contacto:hover, .sobre:hover {
+    transform: scale(1.02);
+    background: rgba(94, 255, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* === CONTENEDOR DE TARJETAS DERECHA === */
+  .contenedor-derecha {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 50%;
+  }
+  
+  .productos, .servicios {
+    display: flex;
+    flex-direction: unset;
+    gap: 15px;
+  }
+  
+  section article {
+    background-color: #111;
+    border: 2px solid #5eff00;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 40px;
+    box-shadow: 0 0 5px #5eff00;
+  }
+  
+  section article:hover {
+    background-color: #1a1a1a;
+    box-shadow: 0 0 15px #5eff00;
+  }
+  
+  section article.expanded {
+    max-height: 300px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  section article h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #caff9a;
+  }
+  
+  section article p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ddd;
+  }
+  
+  /* === FOOTER === */
+  .footer-lema {
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #5eff00;
+    color: #caff9a;
+    box-shadow: 0 -2px 10px #5eff00;
+    font-size: 0.9em;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 708px) {
+    main {
+      flex-direction: column;
+      align-items: normal;
+    }
+  
+    .contenedor-derecha {
+      width: 100%;
+    }
+  
+    .productos, .servicios {
+      max-width: 100%;
+    }
+  }

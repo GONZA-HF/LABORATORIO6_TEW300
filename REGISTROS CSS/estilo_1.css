@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #a69d9d;
+    color: #333;
+  }
+  
+  /* ENCABEZADO */
+  .encabezado {
+    background-color: #222;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .presentacion h1 {
+    font-size: 2.5rem;
+  }
+  
+  .presentacion h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .presentacion p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .borde-vertical {
+    width: 3px;
+    background-color: #555;
+    height: 100px;
+  }
+  
+  /* CONTENIDO GENERAL */
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  /* TARJETA DATOS PERSONALES */
+  .datos-personales {
+    width: 35%;
+    background-color: white;
+    padding: 1.5rem;
+    margin-right: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+  
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .icono {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+  
+  .descripcion {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* INFORMACIÓN PROFESIONAL */
+  .informacion-profesional {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* TARJETAS DERECHA */
+  .tarjeta {
+    background-color: rgb(186, 248, 226);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  }
+  
+  /* BOTÓN DESCARGA */
+  .boton-descarga {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+  }
+  
+  .boton-descarga:hover {
+    box-shadow: 0 0 15px 5px #39ff14;
+  }
+  
+  .boton-descarga:active {
+    transform: scale(0.95);
+  }
+  

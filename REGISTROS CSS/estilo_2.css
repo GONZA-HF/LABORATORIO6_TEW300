@@ -1,0 +1,175 @@
+/* === Estilos Generales === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #7dd3e9; /* Fondo neutro */
+  color: #333;
+}
+
+.portafolio {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Encabezado === */
+.encabezado {
+  display: flex;
+  flex-direction: row;
+  background-color: #25196e; /* Fondo oscuro */
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+}
+
+.presentacion {
+  flex: 1;
+  background-color: #7cc8e876; /* Contraste con fondo general */
+  color: #d3e1e4;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* === Contenido General === */
+.contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* === Datos Personales === */
+.datos-personales_tarjeta {
+  flex: 1;
+  background: #8f8b8b;
+  border-radius: 16px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.897);
+  padding: 2rem;
+  text-align: left;
+  max-width: 300px;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+}
+
+.descripcion {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+/* === Redes Sociales === */
+.redes {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  
+}
+
+a:hover .redes {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #350ae4);
+}
+
+a:active .redes {
+  transform: scale(0.9);
+  filter: drop-shadow(0 0 8px #1439f5ae);
+}
+
+/* === Información Profesional === */
+.informacion-profesional {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Tarjetas colapsables */
+.tarjeta {
+  background-color: #928d8d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tarjeta h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #0572f7;
+}
+
+.tarjeta ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding-left: 1rem;
+}
+
+.tarjeta.expandida ul {
+  max-height: 1000px; 
+}
+
+.tarjeta:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgb(0, 0, 0);
+  transform: scale(0.95);
+  background-color: #21bba6ad;
+  box-shadow: 0 0 18px #3498db;
+}
+
+/* === Botón de currículum === */
+.boton-descarga{
+  background-color: #0a64ff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.boton-descarga:hover {
+  transform: scale(2.05);
+  box-shadow: 0 0 10px #f62803;
+}
+
+.boton-descarga:active {
+  transform: scale(0.95);
+  background-color: #217dbb;
+  box-shadow: 0 0 18px #3498db;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .datos-personales {
+    max-width: 100%;
+  }
+
+  .informacion-profesional {
+    width: 100%;
+  }
+}
+

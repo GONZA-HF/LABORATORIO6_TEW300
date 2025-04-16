@@ -1,0 +1,180 @@
+/* === Estilos Generales === */
+body {
+    background-color: #0b2e13; /* Verde oscuro */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .linea-neon {
+    height: 4px;
+    background: white;
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    border: none;
+    margin: 0 auto 20px auto;
+  }
+  
+  .contenedor-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.151); 
+    border-radius: 15px;
+    margin: 0 20px;
+  }
+  
+  /* === Tarjeta Datos Personales === */
+  .datos-personales {
+    flex: 1;
+    background-color: rgba(255, 0, 0, 0.373);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .foto-perfil {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .foto-perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgb(238, 10, 10);
+    box-shadow: 0 0 15px rgb(209, 131, 5);
+  }
+  
+  .informacion {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .subdivisor {
+    height: 2px;
+    background: black;
+    box-shadow: 0 0 10px black;
+    margin: 20px 0;
+    border: none;
+  }
+  
+  .redes-sociales .icono {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px white);
+  }
+  
+  .redes .icono:hover {
+    transform: scale(2.2);
+    filter: drop-shadow(0 0 10px rgb(139, 108, 108));
+  }
+  
+  .redes .icono:active {
+    transform: scale(0.9);
+    filter: drop-shadow(0 0 10px black);
+  }
+  
+  .sobre-mi {
+    text-align: justify;
+    padding-left: 20px;
+  }
+  
+  /* === Tarjetas Expandibles === */
+  .contenedor-tarjetas {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  
+  
+  .tarjeta.expandible:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .tarjeta.expandible:active {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+  .tarjeta.expandible {
+    max-height: 40px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border: 5px solid rgba(255, 0, 0, 0.745); 
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(61, 59, 59, 0.6);
+    color: white;
+    box-shadow: 0 0 5px rgb(246, 246, 246);
+  }
+  
+  /* Estilo cuando está activa (expandida) */
+  .tarjeta.expandible.activa {
+    max-height: 500px; /* suficiente para mostrar el contenido */
+    background-color: rgba(255, 0, 0, 0.2); /* cambia a otro color más visible */
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    transform: scale(1.02);
+  }
+  /* === Botón CV === */
+  .btn-cv {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 0 10px white;
+  }
+  
+  .btn-cv:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 20px white;
+    transform: scale(1.1);
+  }
+  
+  .btn-cv:active {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px black;
+  }
+  
+  /* === Utilidades === */
+  ul {
+    padding-left: 20px;
+  }
+  
+  h2, h3 {
+    margin: 10px 0;
+  }
+  
+  /* Adaptar tamaño de íconos si es necesario */
+  .redes-sociales img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  
